@@ -1,0 +1,36 @@
+@startuml
+class Soldado {
+  - codigoSoldado: List<Soldado>
+  - nombre: List<Soldado>
+  - apellidos: List<Soldado>
+  - graduacion: List<Soldado>
+  - CuerpoEjecito: List<Soldado>
+  - Compañia: List<Soldado>
+  + actividadSoado(codigoServicio: codigoServicio, descripcion: descripcion): void
+}
+class Cuartel {
+  - codigoCuartel: List<Cuartel>
+  - nombre: List<Cuartel>
+  - ubicacion: List<Cuartel>
+}
+class CuerpoEjercito {
+  - codigoCuerpo: List<CuerpoEjercito>
+  - denominacion: List<CuerpoEjercito>
+}
+
+class Compañia {
+  - numeroCompañia: List<Compañia>
+  - actividadPrincipal: List<Compañia>
+}
+
+Soldado"1" --> "1"Cuartel
+Soldado"1" --> "1"Compañia
+Soldado"1" --> "1"CuerpoEjercito
+Compañia"*" --> "1"Cuartel
+
+
+
+
+
+
+@enduml
